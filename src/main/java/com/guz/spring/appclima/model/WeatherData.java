@@ -2,6 +2,7 @@ package com.guz.spring.appclima.model;
 
 import java.io.Serializable;
 
+/*must be Serializable due the rest call*/
 public class WeatherData implements Serializable {
 
 	/**
@@ -13,6 +14,7 @@ public class WeatherData implements Serializable {
 	double temp;
 	String description;
 	MainWeatherInfo main;
+	String statusMessage;
 
 	public String getName() {
 		return name;
@@ -44,6 +46,14 @@ public class WeatherData implements Serializable {
 
 	public void setMain(MainWeatherInfo main) {
 		this.main = main;
+	}
+
+	public String getStatusMessage() {
+		return statusMessage;
+	}
+
+	public void setStatusMessage(String status) {
+		this.statusMessage = status;
 	}
 
 }

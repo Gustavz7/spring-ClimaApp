@@ -1,5 +1,7 @@
 package com.guz.spring.appclima.controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +20,7 @@ public class WeatherController {
 
 
 	@GetMapping("/{city}")
-	public WeatherData getWeather(@PathVariable String city) {
+	public WeatherData getWeather(@PathVariable String city, @PathVariable Map<String, String> all) {
 		return weatherService.getWeatherData(city);
 	}
 }
